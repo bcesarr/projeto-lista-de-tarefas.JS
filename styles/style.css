@@ -1,0 +1,154 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "roboto", sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+
+header h1 {
+    font-size: 35px;
+}
+
+
+
+/* Main - Parte do Input e Botão */
+
+.tarefas-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.tarefas-container input {
+    width: 80%;
+    height: 60px;
+    padding-left: 12px;
+    font-size: 20px;
+    border: 1px solid rgba(128, 128, 128, 0.500);
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+}
+
+.tarefas-container button {
+    width: 20%;
+    height: 60px;
+    background: green;
+    border: none;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    box-shadow: -3px 0px 8px rgba(0, 255, 13, 0.479);
+    transition: box-shadow 0.5s ease-in-out;
+    /* Adicionando "a mãozinha elemento clicavel" */
+    cursor: pointer;
+}
+
+.tarefas-container button:hover {
+    box-shadow: -1px -1px 7px 0px #00ff22, 1px 1px 7px 0px #00ff22;
+}
+
+
+/* Section - Parte das Listas */
+
+#areaLista {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.item {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 55px;
+    margin-bottom: 2%;
+    background: white;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    box-shadow: 0 5px 10px rgba(128, 128, 128, 0.475);
+}
+
+.item-icone {
+    flex: 10%;
+    font-size: 22px;
+    text-align: center;
+    /* Adicionando "a mãozinha elemento clicavel" */
+    cursor: pointer;
+}
+
+
+.item-nome {
+    flex: 70%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.item-botao {
+    flex: 20%;
+}
+
+.item-botao button {
+    width: 100%;
+    height: 55px;
+    position: relative;
+    background: rgb(209, 9, 9);
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    box-shadow: -3px 0px 8px rgba(255, 0, 0, 0.479);
+    transition: box-shadow 0.5s ease-in-out;
+    /* Adicionando "a mãozinha elemento clicavel" */
+    cursor: pointer;
+}
+
+.item-botao button:hover {
+    box-shadow: -1px -1px 7px 0px #ff0000, 1px 1px 7px 0px #ff0000;
+}
+
+
+
+/* Parte dos Itens concluidos */
+
+.item.concluido {
+    background: rgba(201, 248, 201, 0.767);
+}
+
+.item.concluido .item-nome {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.item.concluido .item-icone {
+    font-size: 23px;
+    color: green;
+    /* Adicionando "a mãozinha elemento clicavel" */
+    cursor: pointer;
+}
